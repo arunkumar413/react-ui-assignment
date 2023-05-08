@@ -4,22 +4,37 @@ export const userSlice = createSlice({
   name: 'user',
   initialState: {
     name: '',
-    email:"",
-    userName:'',
-    mobile:"",
-    roleKey:'',
-    password:""
+    email: "",
+    userName: '',
+    mobile: "",
+    roleKey: '',
+    password: ""
   },
   reducers: {
-    setName: (state,action) => {
+    setName: (state, action) => {
       // Redux Toolkit allows us to write "mutating" logic in reducers. It
       // doesn't actually mutate the state because it uses the immer library,
       // which detects changes to a "draft state" and produces a brand new
       // immutable state based off those changes
       state.name = action.payload
     },
-    setEmail: (state,action) => {
+    setEmail: (state, action) => {
       state.email = action.payload
+    },
+
+    setUserName: (state, action) => {
+
+      state.userName = action.payload
+
+    },
+    setMobile: (state, action) => {
+      state.mobile = action.payload
+    },
+    setRoleKey: (state, action) => {
+      state.roleKey = action.payload
+    },
+    setPassword: (state, action) => {
+      state.password = action.payload
     },
     incrementByAmount: (state, action) => {
       state.value += action.payload
