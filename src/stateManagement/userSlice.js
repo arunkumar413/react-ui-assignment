@@ -18,7 +18,7 @@ export const userSlice = createSlice({
       // immutable state based off those changes
       state.name = action.payload
     },
-    setEmail: (state,payload) => {
+    setEmail: (state,action) => {
       state.email = action.payload
     },
     incrementByAmount: (state, action) => {
